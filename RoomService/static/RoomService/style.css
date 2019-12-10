@@ -1,0 +1,34 @@
+.flex-break {
+    width: 100%;
+}
+
+.flex-with-wrap {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.home-forms {
+    justify-content: center;
+}
+
+.customer-login-form {
+    background-color: #f6f6f6;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.staff-login-form {
+    background-color: #f6f6f6;
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.customer-info {
+    background-color: #f6f6f6;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}

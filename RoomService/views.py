@@ -1,3 +1,4 @@
+from django.shortcuts import render, get_object_or_404
 from django.views import generic
 
 from RoomService.models import Customer
@@ -11,6 +12,14 @@ class HomeView(generic.ListView):
         return Customer.objects.all()
 
 
-class CustomerView(generic.DetailView):
-    model = Customer
-    template_name = 'RoomService/customer.html'
+def customer_dashboard(request, customer_id):
+    customer = get_object_or_404(Customer, pk=customer_id)
+
+    services_for_customer = customer.service_set.all()
+
+    return render(request,
+                  'RoomService/customer.html',
+                  {
+                      'customer': customer,
+                      'services_for_customer': services_for_customer,
+                  })

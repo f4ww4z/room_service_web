@@ -44,4 +44,5 @@ class Service(models.Model):
     start_datetime = models.DateTimeField('start_datetime')
 
     def __str__(self):
-        return f'{self.service_type} started on {self.start_datetime}'
+        start = self.start_datetime
+        return f'{self.service_type} started on {start.ctime()}'

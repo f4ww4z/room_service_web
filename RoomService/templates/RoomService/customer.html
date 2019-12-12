@@ -24,14 +24,17 @@
     {% if services_for_customer %}
       <ul>
         {% for service in services_for_customer %}
-          <li>{{ service }}</li>
+          <li><a href="{% url 'service-detail' service.id %}">{{ service }}</a></li>
         {% endfor %}
       </ul>
     {% else %}
       <h6>No services requested yet.</h6>
     {% endif %}
     <div class="flex-break"></div>
-    <button class="btn btn-primary request-service-button">Request a Service</button>
+    <a class="btn btn-primary request-service-button"
+       href="{% url 'request-service' %}">
+      Request a Service
+    </a>
   </div>
 </div>
 </body>

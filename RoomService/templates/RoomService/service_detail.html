@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include 'RoomService/style-import.html' %}
+  <title>Service | Room Service</title>
+</head>
+<body>
+{% include 'RoomService/navbar.html' %}
+<div class="container">
+  <div class="mt-5 service-container">
+    <h2>{{ service.service_type.type }} requested by {{ service.customer.name }}</h2>
+    <h5>Staff: <b>{{ service.staff }}</b></h5>
+    <h5>Started at: <b>{{ service.start_datetime.ctime }}</b></h5>
+
+    <a class="btn btn-secondary mt-3" href="{% url 'customer-dashboard' service.customer.id %}">
+      My Dashboard
+    </a>
+  </div>
+</div>
+</body>
+</html>

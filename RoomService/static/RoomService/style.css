@@ -43,3 +43,8 @@
 .request-service-button {
     margin-left: auto;
 }
+
+.service-container {
+    padding: 20px;
+    background-color: #e1f6ef;
+}

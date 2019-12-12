@@ -18,7 +18,7 @@ class Customer(models.Model):
     email = models.CharField(max_length=40)
 
     def __str__(self):
-        return f'{self.name} - {self.contact_number}'
+        return f'{self.name} - {self.email}'
 
 
 class Staff(models.Model):
@@ -45,4 +45,4 @@ class Service(models.Model):
 
     def __str__(self):
         start = self.start_datetime
-        return f'{self.service_type} started on {start.ctime()}'
+        return f'{self.service_type} at {start.ctime()}'

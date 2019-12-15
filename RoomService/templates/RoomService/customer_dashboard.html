@@ -17,6 +17,8 @@
     <h5>Country: <b>{{ customer.country }}</b></h5>
     <h5>Contact Number: <b>{{ customer.contact_number }}</b></h5>
     <h5>Email: <b>{{ customer.email }}</b></h5>
+
+    <a href="{% url 'customer-update' customer.id %}" class="btn btn-primary">Edit</a>
   </div>
 
   <div class="w-100 mt-3 ml-lg-3 flex-with-wrap services-for-customer">
@@ -32,7 +34,7 @@
     {% endif %}
     <div class="flex-break"></div>
     <a class="btn btn-primary request-service-button"
-       href="{% url 'request-service' %}">
+       href="{% url 'request-service' customer.id %}">
       Request a Service
     </a>
   </div>

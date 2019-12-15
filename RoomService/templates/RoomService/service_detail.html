@@ -15,6 +15,9 @@
     <a class="btn btn-secondary mt-3" href="{% url 'customer-dashboard' service.customer.id %}">
       My Dashboard
     </a>
+    <a class="btn btn-danger mt-3 ml-2" href="{% url 'cancel-service' service.id %}">
+      Cancel Service
+    </a>
   </div>
 </div>
 </body>

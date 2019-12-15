@@ -39,7 +39,7 @@ class ServiceType(models.Model):
 
 class Service(models.Model):
     service_type = models.ForeignKey(ServiceType, on_delete=models.CASCADE)
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, blank=True, null=True, on_delete=models.CASCADE)
     staff = models.ForeignKey(Staff, on_delete=models.CASCADE)
     start_datetime = models.DateTimeField('start_datetime')
 

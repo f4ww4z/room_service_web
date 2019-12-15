@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include 'RoomService/style-import.html' %}
+  <title>Customer | Room Service</title>
+</head>
+<body>
+{% include 'RoomService/navbar.html' %}
+<div class="container mt-5">
+  <h1 class="mb-5">{% if mode == 'update' %}Update{% else %}New{% endif %} Customer</h1>
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary" type="submit">
+      {% if mode == 'update' %}Update{% else %}Register{% endif %}
+    </button>
+  </form>
+</div>
+
+</body>
+</html>
